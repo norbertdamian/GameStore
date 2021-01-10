@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Draw";
+}
+<h1>@ViewData["Title"]</h1>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="lib/signalr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous"></script>
+    <style>
+        canvas {
+            cursor: crosshair;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="500" onmouseout="clearMousePositions()"></canvas>
+    <select id="color">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+    <div id="output"></div>
+    <script src="~/js/Draw.js"></script>
+</body>
